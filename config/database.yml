@@ -1,0 +1,17 @@
+default: &default
+  adapter: "postgresql"
+  host: "localhost"
+  username: "postgres"
+  password: "postgres"
+
+development:
+  <<: *default
+  database: "umai_dev_db"
+
+test:
+  <<: *default
+  database: "umai_test_db"
+
+production:
+  <<: *default
+  database: "umai_prod_db"

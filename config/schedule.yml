@@ -1,0 +1,4 @@
+# config/schedule.yml
+feedbacks_yml_file_job:
+  cron: "0 9 * * *"
+  class: "FeedbacksXmlFileWorker"

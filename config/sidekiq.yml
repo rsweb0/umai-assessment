@@ -1,0 +1,4 @@
+:logfile: log/sidekiq.log
+:pidfile: tmp/pids/sidekiq.pid
+:queues:
+  - default

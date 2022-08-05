@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "cf947080-a316-47fd-87c3-3bfd20e81ca6",
+		"name": "umai-assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get top N posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}/api/posts?number_of_posts=20000",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "number_of_posts",
+							"value": "20000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a list of IPs from which several different authors posted",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}/api/posts/authors",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"umai_user+1@umai.com\",\n    \"password\": \"password\",\n    \"title\": \"Test title\",\n    \"content\": \"Sample content hsakdkasndnas d askndk asndknaskdnaksndk naskdnks ndk nd nk dnkasndk askd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIURL}}/api/posts",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate the post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"post_id\": 1,\n    \"value\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIURL}}/api/ratings",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"api",
+						"ratings"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"comment\": \"iuasfodasnlfnsdknfksnckskckn kk kjkjankj nfan\",\n    \"owner_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIURL}}/api/feedbacks",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"api",
+						"feedbacks"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
