@@ -24,7 +24,13 @@
 
   `bundle exec puma`
 
-## rspec
+## Setup test environment
+
+  Setup test environment by running following command
+
+  `APP_ENV=test rake db:create db:migrate`
+
+## Run rspec in test environment
 
   To run rspec run following commands
 
